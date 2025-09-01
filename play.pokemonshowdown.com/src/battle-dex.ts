@@ -872,6 +872,10 @@ export const Dex = new class implements ModdedDex {
 			species.id === "xerneasneutral") && ![
 			"floetteeternal", "pichuspikyeared", "pikachubelle", "pikachucosplay", "pikachulibre", "pikachuphd", "pikachupopstar", "pikachurockstar",
 		].includes(species.id);
+		if (species.num <= -1000) {
+			spriteData.spriteDir = "custom";
+			return spriteData;
+		}
 		if (gen >= 8 && homeExists) {
 			spriteData.spriteDir = 'sprites/home-centered';
 			spriteData.x = 8;
@@ -906,9 +910,7 @@ export const Dex = new class implements ModdedDex {
 		else if (gen <= 4 && species.gen <= 4) spriteData.spriteDir = 'sprites/gen4';
 		spriteData.x = 10;
 		spriteData.y = 5;
-		if (species.num <= -1000) {
-			spriteData.spriteDir = "custom";
-		}
+
 		return spriteData;
 	}
 
