@@ -877,6 +877,7 @@ export const Dex = new class implements ModdedDex {
 		].includes(species.id);
 		if (species.num <= -1000) {
 			spriteData.spriteDir = "custom";
+			spriteData.spriteid = species.id;
 			spriteData.x = 8;
 			spriteData.y = 10;
 			spriteData.h = 96;
