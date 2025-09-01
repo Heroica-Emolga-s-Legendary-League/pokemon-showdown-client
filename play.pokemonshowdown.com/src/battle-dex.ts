@@ -769,6 +769,11 @@ export const Dex = new class implements ModdedDex {
 			spriteData.y += -11;
 		}
 
+		if (species.num < -1000 ) {
+			const url = "https://raw.githubusercontent.com/Heroica-Emolga-s-Legendary-League/refs/main/" + species.id + `${isFront ? "" : "-back"}${spriteData.shiny ? '-shiny' : ''}`+ ".png";
+			spriteData.url = url;
+		}
+
 		return spriteData;
 	}
 
@@ -901,6 +906,9 @@ export const Dex = new class implements ModdedDex {
 		else if (gen <= 4 && species.gen <= 4) spriteData.spriteDir = 'sprites/gen4';
 		spriteData.x = 10;
 		spriteData.y = 5;
+		if (species.num < -1000) {
+			spriteData.spriteDir = "custom";
+		}
 		return spriteData;
 	}
 
@@ -909,6 +917,9 @@ export const Dex = new class implements ModdedDex {
 		const data = this.getTeambuilderSpriteData(pokemon, dex);
 		const shiny = (data.shiny ? '-shiny' : '');
 		const resize = (data.h ? `background-size:${data.h}px` : '');
+		if (data.spriteDir === 'custom') {
+			return `background-image:url(https://raw.githubusercontent.com/Heroica-Emolga-s-Legendary-League/refs/main/${data.spriteid}${shiny}.png);background-position:${data.x + xOffset}px ${data.y + yOffset}px;background-repeat:no-repeat;${resize}`;
+		}
 		return `background-image:url(${Dex.resourcePrefix}${data.spriteDir}${shiny}/${data.spriteid}.png);background-position:${data.x + xOffset}px ${data.y + yOffset}px;background-repeat:no-repeat;${resize}`;
 	}
 
