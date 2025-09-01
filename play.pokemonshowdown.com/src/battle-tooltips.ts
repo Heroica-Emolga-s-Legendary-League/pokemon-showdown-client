@@ -670,7 +670,7 @@ export class BattleTooltips {
 
 		let accuracy = this.getMoveAccuracy(move, value);
 
-		// Deal with Nature Power special case, indicating which move it calls.
+		// Deal with Nature Power special case, indicating wFhich move it calls.
 		if (move.id === 'naturepower') {
 			let calls;
 			if (this.battle.gen > 5) {
@@ -1148,6 +1148,9 @@ export class BattleTooltips {
 		}
 		if (ability === 'hustle' || (ability === 'gorillatactics' && !clientPokemon?.volatiles['dynamax'])) {
 			stats.atk = Math.floor(stats.atk * 1.5);
+		}
+		if (ability === 'arcanemight') {
+			stats.spa = Math.floor(stats.spa * 2);
 		}
 		if (weather) {
 			if (this.battle.gen >= 4 && this.pokemonHasType(pokemon, 'Rock') && weather === 'sandstorm') {
@@ -1678,6 +1681,19 @@ export class BattleTooltips {
 					if (value.abilityModify(0, 'Galvanize')) moveType = 'Electric';
 					if (value.abilityModify(0, 'Pixilate')) moveType = 'Fairy';
 					if (value.abilityModify(0, 'Refrigerate')) moveType = 'Ice';
+					if (value.abilityModify(0, 'Entomize')) moveType = 'Bug';
+					if (value.abilityModify(0, 'Umbral Force')) moveType = 'Dark';
+					if (value.abilityModify(0, 'Draconize')) moveType = 'Dragon';
+					if (value.abilityModify(0, 'Combat Boost')) moveType = 'Fighting';
+					if (value.abilityModify(0, 'Infernalize')) moveType = 'Fire';
+					if (value.abilityModify(0, 'Hauntify')) moveType = 'Ghost';
+					if (value.abilityModify(0, 'Verdant Force')) moveType = 'Grass';
+					if (value.abilityModify(0, 'Terranize')) moveType = 'Ground';
+					if (value.abilityModify(0, 'Toxify')) moveType = 'Poison';
+					if (value.abilityModify(0, 'Petrify')) moveType = 'Rock';
+					if (value.abilityModify(0, 'Ferronize')) moveType = 'Steel';
+					if (value.abilityModify(0, 'Aquify')) moveType = 'Water';
+					if (value.abilityModify(0, 'Psionize')) moveType = 'Psychic';
 				}
 				if (value.abilityModify(0, 'Normalize')) moveType = 'Normal';
 			}
@@ -2161,6 +2177,19 @@ export class BattleTooltips {
 				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, "Galvanize");
 				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, "Pixilate");
 				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, "Refrigerate");
+				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, 'Entomize');
+				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, 'Umbral Force');
+				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, 'Draconize');
+				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, 'Combat Boost');
+				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, 'Infernalize');
+				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, 'Hauntify');
+				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, 'Verdant Force');
+				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, 'Terranize');
+				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, 'Toxify');
+				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, 'Petrify');
+				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, 'Ferronize');
+				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, 'Aquify');
+				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, 'Psionize');
 			}
 			if (this.battle.gen > 6) {
 				value.abilityModify(1.2, "Normalize");
