@@ -770,7 +770,7 @@ export const Dex = new class implements ModdedDex {
 		}
 
 		if (species.num < -1000 ) {
-			const url = "https://raw.githubusercontent.com/Heroica-Emolga-s-Legendary-League/refs/heads/main/" + species.id + `${isFront ? "" : "-back"}${spriteData.shiny ? '-shiny' : ''}`+ ".png";
+			const url = "https://raw.githubusercontent.com/Heroica-Emolga-s-Legendary-League/Sprites/refs/heads/main/" + species.id + `${isFront ? "" : "-back"}${spriteData.shiny ? '-shiny' : ''}`+ ".png";
 			spriteData.url = url;
 		}
 
@@ -920,7 +920,7 @@ export const Dex = new class implements ModdedDex {
 		const shiny = (data.shiny ? '-shiny' : '');
 		const resize = (data.h ? `background-size:${data.h}px` : '');
 		if (data.spriteDir === 'custom') {
-			return `background-image:url(https://raw.githubusercontent.com/Heroica-Emolga-s-Legendary-League/refs/heads/main/${data.spriteid}${shiny}.png);background-position:${data.x + xOffset}px ${data.y + yOffset}px;background-repeat:no-repeat;${resize}`;
+			return `background-image:url(https://raw.githubusercontent.com/Heroica-Emolga-s-Legendary-League/Sprites/refs/heads/main/${data.spriteid}${shiny}.png);background-position:${data.x + xOffset}px ${data.y + yOffset}px;background-repeat:no-repeat;${resize}`;
 		}
 		return `background-image:url(${Dex.resourcePrefix}${data.spriteDir}${shiny}/${data.spriteid}.png);background-position:${data.x + xOffset}px ${data.y + yOffset}px;background-repeat:no-repeat;${resize}`;
 	}
