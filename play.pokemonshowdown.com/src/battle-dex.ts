@@ -906,7 +906,7 @@ export const Dex = new class implements ModdedDex {
 		else if (gen <= 4 && species.gen <= 4) spriteData.spriteDir = 'sprites/gen4';
 		spriteData.x = 10;
 		spriteData.y = 5;
-		if (species.num < -1000) {
+		if (species.num <= -1000) {
 			spriteData.spriteDir = "custom";
 		}
 		return spriteData;
