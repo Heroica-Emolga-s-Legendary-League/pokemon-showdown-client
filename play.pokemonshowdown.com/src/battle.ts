@@ -3115,7 +3115,10 @@ export class Battle {
 					}
 				}
 				if (this.gen > 6) maxTimeLeft = 8;
+				const ability = Dex.getEffect(kwArgs.from);
+				if (ability.effectType === 'Ability') maxTimeLeft += 2;
 			}
+
 			if (kwArgs.persistent) minTimeLeft += 2;
 			this.addPseudoWeather(effect.name, minTimeLeft, maxTimeLeft);
 

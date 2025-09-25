@@ -1299,6 +1299,11 @@ export class BattleTooltips {
 				stats.spd = Math.floor(stats.spd * 0.75);
 			}
 		}
+		if (this.battle.abilityActive('Boots of Ruin')) {
+			if (ability !== 'bootsofruin') {
+				stats.spe = Math.floor(stats.spe * 0.75);
+			}
+		}
 
 		// SSB
 		if (this.battle.tier.includes('Super Staff Bros')) {
