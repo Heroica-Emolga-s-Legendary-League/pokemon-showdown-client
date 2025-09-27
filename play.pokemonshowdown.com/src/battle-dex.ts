@@ -832,7 +832,7 @@ export const Dex = new class implements ModdedDex {
 		let left = (num % 12) * 40;
 		let fainted = ((pokemon as Pokemon | ServerPokemon)?.fainted ?
 			`;opacity:.3;filter:grayscale(100%) brightness(.5)` : ``);
-		if (this.species.get(id).num <= -1000) {
+		if (this.species.get(id).num <= -1000 || this.species.get(id).forme === 'Prime') {
 			return `background:transparent url(https://raw.githubusercontent.com/Heroica-Emolga-s-Legendary-League/Sprites/refs/heads/main/${id}_icon.png) no-repeat scroll -${left}px -${top}px${fainted}`;
 		}
 		return `background:transparent url(${Dex.resourcePrefix}sprites/pokemonicons-sheet.png?v19) no-repeat scroll -${left}px -${top}px${fainted}`;
@@ -875,7 +875,7 @@ export const Dex = new class implements ModdedDex {
 			species.id === "xerneasneutral") && ![
 			"floetteeternal", "pichuspikyeared", "pikachubelle", "pikachucosplay", "pikachulibre", "pikachuphd", "pikachupopstar", "pikachurockstar",
 		].includes(species.id);
-		if (species.num <= -1000) {
+		if (species.num <= -1000 || species.forme === 'Prime') {
 			spriteData.spriteDir = "custom";
 			spriteData.spriteid = species.id;
 			spriteData.x = 8;
