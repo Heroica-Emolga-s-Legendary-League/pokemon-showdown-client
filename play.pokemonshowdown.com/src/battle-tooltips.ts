@@ -1225,7 +1225,7 @@ export class BattleTooltips {
 				speedModifiers.push(1.5);
 			}
 		}
-		if (item === 'eviolite' && this.battle.dex.species.get(serverPokemon.speciesForme).nfe) {
+		if (item === 'eviolite' && this.battle.dex.species.get(serverPokemon.speciesForme).nfe || this.battle.dex.species.get(serverPokemon.speciesForme).id === 'bronzong') {
 			stats.def = Math.floor(stats.def * 1.5);
 			stats.spd = Math.floor(stats.spd * 1.5);
 		}
