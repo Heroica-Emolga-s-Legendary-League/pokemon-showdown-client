@@ -191,7 +191,7 @@ preactIndexContents = preactIndexContents.replace(URL_REGEX, addCachebuster);
 let crossprotocolContents = fs.readFileSync('play.pokemonshowdown.com/crossprotocol.template.html', UTF8);
 crossprotocolContents = crossprotocolContents.replace(URL_REGEX, addCachebuster);
 let replayEmbedContents = fs.readFileSync('play.pokemonshowdown.com/js/replay-embed.template.js', UTF8);
-replayEmbedContents = replayEmbedContents.replace(/play\.pokemonshowdown\.com/g, routes.client);
+replayEmbedContents = replayEmbedContents.replace(/play\.pokemonshowdown\.com/g, 'heroicemolga.serveminecraft.net');
 
 // add news, only if it's actually likely to exist
 process.stdout.write("and news... ");
