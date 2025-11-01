@@ -1208,7 +1208,7 @@ export class BattleTooltips {
 				speedModifiers.push(2);
 			}
 			for (const statName of Dex.statNamesExceptHP) {
-				if (clientPokemon.volatiles['protosynthesis' + statName] || clientPokemon.volatiles['quarkdrive' + statName]) {
+				if (clientPokemon.volatiles['protosynthesis' + statName] || clientPokemon.volatiles['quarkdrive' + statName] || clientPokemon.volatiles['pureharvest' + statName] || clientPokemon.volatiles['mysticzone' + statName] || clientPokemon.volatiles['psychoritual' + statName] || clientPokemon.volatiles['atlantisblessing' + statName] || clientPokemon.volatiles['tundracore' + statName] || clientPokemon.volatiles['lithogrit' + statName]) {
 					if (statName === 'spe') {
 						speedModifiers.push(1.5);
 					} else {
