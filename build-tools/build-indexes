@@ -507,6 +507,14 @@ process.stdout.write("Building `data/teambuilder-tables.js`... ");
 			BattleTeambuilderTable['gen8bdsp'].overrideTier = overrideTier;
 			BattleTeambuilderTable['gen8bdsp'].monotypeBans = monotypeBans;
 			BattleTeambuilderTable['gen8bdsp'].formatSlices = formatSlices;
+		} else if (gen === 'gen8') {
+			BattleTeambuilderTable['gen8'] = {};
+			BattleTeambuilderTable['gen8'].learnsets = {};
+			BattleTeambuilderTable['gen8'].tiers = tiers;
+			BattleTeambuilderTable['gen8'].items = items;
+			BattleTeambuilderTable['gen8'].overrideTier = overrideTier;
+			BattleTeambuilderTable['gen8'].monotypeBans = monotypeBans;
+			BattleTeambuilderTable['gen8'].formatSlices = formatSlices;
 		} else if (isVGC) {
 			BattleTeambuilderTable[gen + 'vgc'] = {};
 			BattleTeambuilderTable[gen + 'vgc'].tiers = tiers;
