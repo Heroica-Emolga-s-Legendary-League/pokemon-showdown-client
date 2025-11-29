@@ -1032,6 +1032,18 @@ process.stdout.write("Building `data/teambuilder-tables.js`... ");
 			}
 		}
 	}
+
+	const gen8Learnsets = Dex.mod('gen8').data.Learnsets;
+	for (const id in gen8Learnsets) {
+		const species = Dex.mod('gen8').species.get(id);
+		if (species.isNonstandard && !['Unobtainable', 'CAP'].includes(species.isNonstandard)) continue;
+		const learnset = gen8Learnsets[id].learnset;
+		BattleTeambuilderTable['gen8'].learnsets[id] = {};
+		for (const moveid in learnset) {
+			BattleTeambuilderTable['gen8'].learnsets[id][moveid] = '8g';
+		}
+	}
+
 	const PreDLCLearnsets = Dex.mod('gen9predlc').data.Learnsets;
 	for (const id in PreDLCLearnsets) {
 		const learnset = PreDLCLearnsets[id].learnset;
