@@ -1287,11 +1287,12 @@ process.stdout.write("Building `data/teambuilder-tables.js`... ");
 				}
 			}
 		}
+		if (mod === 'gen8bdsp') {
+			const armarouge = BattleTeambuilderTable[mod].learnsets['armarouge'];
+			console.log('armarouge learnset:', armarouge);
+		}
 	}
-	if (mod === 'gen8bdsp') {
-		const armarouge = BattleTeambuilderTable[mod].learnsets['armarouge'];
-		console.log('armarouge learnset:', armarouge);
-	}
+
 	buf += `exports.BattleTeambuilderTable = JSON.parse('${JSON.stringify(BattleTeambuilderTable).replace(/['\\]/g, "\\$&")}');\n\n`;
 
 	fs.writeFileSync('play.pokemonshowdown.com/data/teambuilder-tables.js', buf);
