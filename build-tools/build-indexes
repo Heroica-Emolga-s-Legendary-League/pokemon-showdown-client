@@ -883,6 +883,7 @@ process.stdout.write("Building `data/teambuilder-tables.js`... ");
 		items.push(...poorItems);
 		items.push(...badItems);
 		items.push(...unreleasedItems);
+		if (isBDSP) console.log(items);
 	}
 
 	//
