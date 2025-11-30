@@ -2898,7 +2898,7 @@
 				buf += '</select></div></div>';
 			}
 
-			if (!isLetsGo && (this.curTeam.gen === 7 || isNatDex || (isBDSP && species.baseSpecies === 'Unown'))) {
+			if (!isLetsGo && (this.curTeam.gen === 7 || isNatDex || this.curTeam.gen === 8 || this.curTeam.gen === 9)) {
 				buf += '<div class="formrow"><label class="formlabel" title="Hidden Power Type">Hidden Power:</label><div><select name="hptype" class="button">';
 				buf += '<option value=""' + (!set.hpType ? ' selected="selected"' : '') + '>(automatic type)</option>'; // unset
 				var types = Dex.types.all();
@@ -2910,7 +2910,7 @@
 				buf += '</select></div></div>';
 			}
 
-			if (this.curTeam.gen === 9) {
+			if (this.curTeam.gen === 9 || (this.curTeam.gen === 8 && isBDSP)) {
 				buf += '<div class="formrow"><label class="formlabel" title="Tera Type">Tera Type:</label><div>';
 				buf += '<select name="teratype" class="button">';
 				var types = Dex.types.all();
