@@ -990,7 +990,7 @@ process.stdout.write("Building `data/teambuilder-tables.js`... ");
 	const BDSPLearnsets = Dex.mod('gen8bdsp').data.Learnsets;
 	for (const id in BDSPLearnsets) {
 		const species = Dex.mod('gen8bdsp').species.get(id);
-		if (species.isNonstandard && !['Unobtainable', 'CAP'].includes(species.isNonstandard)) continue;
+		if (species.isNonstandard && !['Unobtainable', 'CAP', 'Past', 'Future'].includes(species.isNonstandard)) continue;
 		const learnset = BDSPLearnsets[id].learnset;
 		BattleTeambuilderTable['gen8bdsp'].learnsets[id] = {};
 		for (const moveid in learnset) {
@@ -1038,17 +1038,6 @@ process.stdout.write("Building `data/teambuilder-tables.js`... ");
 			if (gens.indexOf(8) >= 0 && learnset[moveid].some(x => x[0] === '8' && x !== '8V')) {
 				BattleTeambuilderTable['gen8dlc1'].learnsets[id][moveid] += 'g';
 			}
-		}
-	}
-
-	const gen8Learnsets = Dex.mod('gen8').data.Learnsets;
-	for (const id in gen8Learnsets) {
-		const species = Dex.mod('gen8').species.get(id);
-		if (species.isNonstandard && !['Unobtainable', 'CAP'].includes(species.isNonstandard)) continue;
-		const learnset = gen8Learnsets[id].learnset;
-		BattleTeambuilderTable['gen8'].learnsets[id] = {};
-		for (const moveid in learnset) {
-			BattleTeambuilderTable['gen8'].learnsets[id][moveid] = '8g';
 		}
 	}
 
@@ -1241,7 +1230,7 @@ process.stdout.write("Building `data/teambuilder-tables.js`... ");
 	// Mods
 	//
 
-	for (const mod of ['gen3rs', 'gen5bw1', 'gen7letsgo', 'gen8bdsp', 'gen8', 'gen9ssb']) {
+	for (const mod of ['gen3rs', 'gen5bw1', 'gen7letsgo', 'gen8bdsp', 'gen9ssb']) {
 		const modDex = Dex.mod(mod);
 		const modData = modDex.data;
 		const parentDex = Dex.forGen(modDex.gen);
