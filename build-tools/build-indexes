@@ -994,7 +994,9 @@ process.stdout.write("Building `data/teambuilder-tables.js`... ");
 		if (species.isNonstandard && !['Unobtainable', 'CAP', 'Past'].includes(species.isNonstandard)) continue;
 		if (id === 'armarouge') console.log(id, species.isNonstandard, 'Passed');
 		const learnset = BDSPLearnsets[id].learnset;
+		if (id === 'armarouge') console.log(id, learnset);
 		BattleTeambuilderTable['gen8bdsp'].learnsets[id] = {};
+		if (id === 'armarouge') console.log(id, BattleTeambuilderTable['gen8bdsp'].learnsets[id]);
 		for (const moveid in learnset) {
 			BattleTeambuilderTable['gen8bdsp'].learnsets[id][moveid] = '8g';
 		}
