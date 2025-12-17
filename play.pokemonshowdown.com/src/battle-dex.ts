@@ -769,7 +769,7 @@ export const Dex = new class implements ModdedDex {
 			spriteData.y += -11;
 		}
 
-		if (species.num < -1000 || species.forme === "Prime") {
+		if (species.num < 0 || species.forme === "Prime") {
 			const url = "https://raw.githubusercontent.com/Heroica-Emolga-s-Legendary-League/Sprites/refs/heads/main/" + species.id + `${isFront ? "" : "-back"}${spriteData.shiny ? '-shiny' : ''}`+ ".png";
 			spriteData.url = url;
 		}
