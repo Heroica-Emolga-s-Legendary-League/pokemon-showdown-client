@@ -991,6 +991,7 @@ process.stdout.write("Building `data/teambuilder-tables.js`... ");
 	for (const id in BDSPLearnsets) {
 		const species = Dex.mod('gen8bdsp').species.get(id);
 		if (species.isNonstandard && !['Unobtainable', 'CAP', 'Past'].includes(species.isNonstandard)) continue;
+		console.log(id);
 		const learnset = BDSPLearnsets[id].learnset;
 		BattleTeambuilderTable['gen8bdsp'].learnsets[id] = {};
 		for (const moveid in learnset) {
