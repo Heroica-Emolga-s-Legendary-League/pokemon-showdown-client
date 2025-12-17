@@ -769,7 +769,7 @@ export const Dex = new class implements ModdedDex {
 			spriteData.y += -11;
 		}
 
-		if (species.num < 0 || species.forme === "Prime") {
+		if (species.num < -1000 || species.forme === "Prime" || (species.num < 0 && species.forme === "Mega")) {
 			const url = "https://raw.githubusercontent.com/Heroica-Emolga-s-Legendary-League/Sprites/refs/heads/main/" + species.id + `${isFront ? "" : "-back"}${spriteData.shiny ? '-shiny' : ''}`+ ".png";
 			spriteData.url = url;
 		}
@@ -832,7 +832,7 @@ export const Dex = new class implements ModdedDex {
 		let left = (num % 12) * 40;
 		let fainted = ((pokemon as Pokemon | ServerPokemon)?.fainted ?
 			`;opacity:.3;filter:grayscale(100%) brightness(.5)` : ``);
-		if (this.species.get(id).num <= -1000 || this.species.get(id).forme === 'Prime') {
+		if (this.species.get(id).num <= -1000 || this.species.get(id).forme === 'Prime' || (this.species.get(id).num < 0 && this.species.get(id).forme === "Mega")) {
 			top = 0;
 			left = 0;
 			return `background:transparent url(https://raw.githubusercontent.com/Heroica-Emolga-s-Legendary-League/Sprites/refs/heads/main/${id.replace("-Prime", "prime")}_icon.png) no-repeat scroll -${left}px -${top}px${fainted}`;
