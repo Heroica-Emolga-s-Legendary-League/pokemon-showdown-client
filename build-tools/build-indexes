@@ -991,8 +991,10 @@ process.stdout.write("Building `data/teambuilder-tables.js`... ");
 	for (const id in BDSPLearnsets) {
 		const species = Dex.mod('gen8bdsp').species.get(id);
 		if (species.isNonstandard && !['Unobtainable', 'CAP', 'Past'].includes(species.isNonstandard)) continue;
-		if (BDSPLearnsets[id].learnset === undefined) {
-			BDSPLearnsets[id].learnset = {};
+		if (BDSPLearnsets[id] === undefined) {
+			BDSPLearnsets[id] ={
+				learnset: {},
+			};
 		}
 		let learnset = BDSPLearnsets[id].learnset;
 		if (species.baseSpecies && Dex.mod('gen8bdsp').species.get(species.baseSpecies).learnset) {
