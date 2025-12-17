@@ -877,7 +877,7 @@ export const Dex = new class implements ModdedDex {
 			species.id === "xerneasneutral") && ![
 			"floetteeternal", "pichuspikyeared", "pikachubelle", "pikachucosplay", "pikachulibre", "pikachuphd", "pikachupopstar", "pikachurockstar",
 		].includes(species.id);
-		if (species.num <= -1000 || species.forme === 'Prime') {
+		if (species.num <= -1000 || species.forme === 'Prime' || (species.num < 0 && species.forme === "Mega")) {
 			spriteData.spriteDir = "custom";
 			spriteData.spriteid = species.id.replace("-Prime", "");
 			spriteData.x = 8;
