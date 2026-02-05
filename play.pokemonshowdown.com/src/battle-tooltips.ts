@@ -1226,7 +1226,7 @@ export class BattleTooltips {
 			}
 		}
 		//this.battle.dex.species.get(serverPokemon.speciesForme).id === 'bronzong'
-		if (item === 'eviolite' && (this.battle.dex.species.get(serverPokemon.speciesForme).nfe || ['bronzong', 'alomomola', 'grumpig'].includes(this.battle.dex.species.get(serverPokemon.speciesForme).id))) {
+		if (item === 'eviolite' && (this.battle.dex.species.get(serverPokemon.speciesForme).nfe || ['bronzong', 'alomomola', 'grumpig', 'sableye'].includes(this.battle.dex.species.get(serverPokemon.speciesForme).id))) {
 			stats.def = Math.floor(stats.def * 1.5);
 			stats.spd = Math.floor(stats.spd * 1.5);
 		}
