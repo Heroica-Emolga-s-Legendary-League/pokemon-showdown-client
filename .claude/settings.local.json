@@ -3,7 +3,8 @@
     "allow": [
       "Bash(head:*)",
       "Bash(tail:*)",
-      "Bash(node:*)"
+      "Bash(node:*)",
+      "WebFetch(domain:github.com)"
     ]
   }
 }
