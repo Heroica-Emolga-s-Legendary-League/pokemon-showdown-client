@@ -115,12 +115,14 @@ This repository can be deployed directly in Coolify with Docker.
 4. Expose port `80`.
 5. Deploy.
 
-The container builds client assets with Node.js and serves the project via Apache/PHP.
+The container builds client assets with Node.js and serves static client files via Nginx.
 
 After deploy, open:
 
 - `/` — serves `testclient.html` (the game client entry point)
 - `/testclient.html` — same as above, direct link
+
+Container healthcheck endpoint: `/testclient.html`
 
 If you need custom route paths/domains, edit `config/routes.json` before deploying so the build output points to your desired endpoints.
 
