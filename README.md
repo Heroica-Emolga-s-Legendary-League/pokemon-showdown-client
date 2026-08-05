@@ -104,6 +104,29 @@ Even with a test key, the following things will fail in `testclient.html`:
 
 Everything else can be tested.
 
+Coolify deployment
+------------------------------------------------------------------------
+
+This repository can be deployed directly in Coolify with Docker.
+
+1. Create a new **Application** in Coolify from this Git repository.
+2. Select **Dockerfile** as the build type.
+3. Use the repository root as the build context (`.`).
+4. Expose port `80`.
+5. Deploy.
+
+The container builds client assets with Node.js and serves the project via Apache/PHP.
+
+After deploy, open:
+
+- `/play.pokemonshowdown.com/` for the main client
+- `/replay.pokemonshowdown.com/` for replay pages
+- `/teams.pokemonshowdown.com/` for teams pages
+
+Root (`/`) is redirected to `/play.pokemonshowdown.com/`.
+
+If you need custom route paths/domains, edit `config/routes.json` before deploying so the build output points to your desired endpoints.
+
 Warning
 ------------------------------------------------------------------------
 
