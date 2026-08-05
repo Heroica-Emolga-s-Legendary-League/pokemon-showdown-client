@@ -23,6 +23,6 @@ COPY --from=build /app /var/www/html
 
 EXPOSE 80
 
-# Verify Apache is actually serving HTTP, not just that a file exists on disk.
+# Verify Apache is actually serving the testclient entry point over HTTP.
 HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \
-  CMD curl -fsSL http://localhost/play.pokemonshowdown.com/ -o /dev/null || exit 1
+  CMD curl -fsSL http://localhost/testclient.html -o /dev/null || exit 1
