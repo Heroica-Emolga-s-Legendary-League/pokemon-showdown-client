@@ -958,7 +958,8 @@ process.stdout.write("Building `data/teambuilder-tables.js`... ");
 			const gens = learnset[moveid].map(x => Number(x[0]));
 			const minGen = Math.min(...gens);
 			if (!learnsets[id]) {
-				throw new Error(`${id} has a Gen 2 learnset but not a modern learnset`);
+				console.warn(`Warning: ${id} has a Gen 2 learnset but not a modern learnset; skipping this Gen 2 entry.`);
+				continue;
 			}
 			if (!learnsets[id][moveid]) learnsets[id][moveid] = '';
 			if (minGen === 2) learnsets[id][moveid] = '2' + learnsets[id][moveid];
