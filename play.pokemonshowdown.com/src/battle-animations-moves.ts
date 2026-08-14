@@ -37811,3 +37811,13 @@ BattleMoveAnims['tripledive'] = { anim: BattleMoveAnims['dive'].anim };
 BattleMoveAnims['hydrosteam'] = { anim: BattleMoveAnims['steameruption'].anim };
 BattleMoveAnims['psyblade'] = { anim: BattleMoveAnims['psychocut'].anim };
 BattleMoveAnims['polarflare'] = { anim: BattleMoveAnims['torchsong'].anim };
+
+// #region Custom Moves
+BattleMoveAnims['sugarrush'] = { anim: BattleMoveAnims['extremespeed'].anim };
+BattleMoveAnims['lifedrain'] = { anim: BattleMoveAnims['absorb'].anim };
+BattleMoveAnims['blackmagic'] = { anim: BattleMoveAnims['hyperspacehole'].anim };
+BattleMoveAnims['basiliskconcotion'] = { anim: BattleMoveAnims['sludgebomb'].anim };
+BattleMoveAnims['distortingscale'] = { anim: BattleMoveAnims['clangeroussoul'].anim };
+BattleMoveAnims['piercingstrike'] = { anim: BattleMoveAnims['wickedblow'].anim };
+BattleMoveAnims['dragonstorm'] = { anim: BattleMoveAnims['twister'].anim };
+// #endregion Custom Moves
