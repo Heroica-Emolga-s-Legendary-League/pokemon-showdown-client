@@ -3442,6 +3442,9 @@ export class Battle {
 			if (this.tier.includes('Super Staff Bros')) {
 				this.dex = Dex.mod('gen9ssb' as ID);
 			}
+			if (this.tier.includes('BDSP')) {
+				this.dex = Dex.mod('gen8bdsp' as ID);
+			}
 			this.log(args);
 			break;
 		}
