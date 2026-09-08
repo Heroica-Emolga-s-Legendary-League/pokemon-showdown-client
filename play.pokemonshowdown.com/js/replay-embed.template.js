@@ -28,27 +28,27 @@ function requireScript(url) {
 	document.head.appendChild(scriptEl);
 }
 
-linkStyle('https://heroicemolga.serveminecraft.net/style/font-awesome.css?');
-linkStyle('https://heroicemolga.serveminecraft.net/style/battle.css?a7');
-linkStyle('https://heroicemolga.serveminecraft.net/style/replay.css?a7');
-linkStyle('https://heroicemolga.serveminecraft.net/style/utilichart.css?a7');
+linkStyle('https://play.heroicemolgaslegendaryleague.com/style/font-awesome.css?');
+linkStyle('https://play.heroicemolgaslegendaryleague.com/style/battle.css?a7');
+linkStyle('https://play.heroicemolgaslegendaryleague.com/style/replay.css?a7');
+linkStyle('https://play.heroicemolgaslegendaryleague.com/style/utilichart.css?a7');
 
-requireScript('https://heroicemolga.serveminecraft.net/js/lib/ps-polyfill.js');
-requireScript('https://heroicemolga.serveminecraft.net/config/config.js?a7');
-requireScript('https://heroicemolga.serveminecraft.net/js/lib/jquery-1.11.0.min.js');
-requireScript('https://heroicemolga.serveminecraft.net/js/lib/html-sanitizer-minified.js');
-requireScript('https://heroicemolga.serveminecraft.net/js/battle-sound.js');
-requireScript('https://heroicemolga.serveminecraft.net/js/battledata.js?a7');
-requireScript('https://heroicemolga.serveminecraft.net/data/pokedex-mini.js?a7');
-requireScript('https://heroicemolga.serveminecraft.net/data/pokedex-mini-bw.js?a7');
-requireScript('https://heroicemolga.serveminecraft.net/data/graphics.js?a7');
-requireScript('https://heroicemolga.serveminecraft.net/data/pokedex.js?a7');
-requireScript('https://heroicemolga.serveminecraft.net/data/moves.js?a7');
-requireScript('https://heroicemolga.serveminecraft.net/data/abilities.js?a7');
-requireScript('https://heroicemolga.serveminecraft.net/data/items.js?a7');
-requireScript('https://heroicemolga.serveminecraft.net/data/teambuilder-tables.js?a7');
-requireScript('https://heroicemolga.serveminecraft.net/js/battle-tooltips.js?a7');
-requireScript('https://heroicemolga.serveminecraft.net/js/battle.js?a7');
+requireScript('https://play.heroicemolgaslegendaryleague.com/js/lib/ps-polyfill.js');
+requireScript('https://play.heroicemolgaslegendaryleague.com/config/config.js?a7');
+requireScript('https://play.heroicemolgaslegendaryleague.com/js/lib/jquery-1.11.0.min.js');
+requireScript('https://play.heroicemolgaslegendaryleague.com/js/lib/html-sanitizer-minified.js');
+requireScript('https://play.heroicemolgaslegendaryleague.com/js/battle-sound.js');
+requireScript('https://play.heroicemolgaslegendaryleague.com/js/battledata.js?a7');
+requireScript('https://play.heroicemolgaslegendaryleague.com/data/pokedex-mini.js?a7');
+requireScript('https://play.heroicemolgaslegendaryleague.com/data/pokedex-mini-bw.js?a7');
+requireScript('https://play.heroicemolgaslegendaryleague.com/data/graphics.js?a7');
+requireScript('https://play.heroicemolgaslegendaryleague.com/data/pokedex.js?a7');
+requireScript('https://play.heroicemolgaslegendaryleague.com/data/moves.js?a7');
+requireScript('https://play.heroicemolgaslegendaryleague.com/data/abilities.js?a7');
+requireScript('https://play.heroicemolgaslegendaryleague.com/data/items.js?a7');
+requireScript('https://play.heroicemolgaslegendaryleague.com/data/teambuilder-tables.js?a7');
+requireScript('https://play.heroicemolgaslegendaryleague.com/js/battle-tooltips.js?a7');
+requireScript('https://play.heroicemolgaslegendaryleague.com/js/battle.js?a7');
 
 var Replays = {
 	battle: null,
